@@ -2,36 +2,8 @@
 
 
 //Modules
-mod foo {
-  pub fn print() {
-    println!("foo")
-  }
-}
-mod my {
-  use super::foo;
-  pub fn call_foo() {
-    foo::print();
-  }
 
-  pub fn print() {
-    println!("my")
-  }
-
-  fn f() {
-    a::print();
-  }
-
-  pub mod a {
-    #[derive(Debug)]
-    pub struct S {
-      pub id: u32,
-      pub name: String
-    }
-    pub fn print() {
-      println!("a")
-    }
-  }
-}
+use first::my;
 
 fn main() {
   my::print();
