@@ -1,3 +1,4 @@
+#![allow(unused)]
 use super::foo;
 pub fn call_foo() {
   foo::print();
