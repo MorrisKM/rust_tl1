@@ -9,4 +9,6 @@ fn main(){
   let Some(v) = x else {
     panic!("The value does not exist") //program will panic if the value of x is none
   };
+
+  println!("{v}") //now the variable v is available globally
 }
