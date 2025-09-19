@@ -33,6 +33,7 @@ fn return_concretet_type() -> impl Animal {
   Dog
 }
 
+//dynamic dispatch - trait is not known at compile time
 fn rand_animal(rand: u32) -> Box<dyn Animal> {
   if rand <= 10 {
     Box::new(Dog)
