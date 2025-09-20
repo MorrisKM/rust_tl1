@@ -16,7 +16,7 @@ async fn g3() -> u32 {
 
 async fn f() {
   println!("f");
-  //tokio join returns a result of the future returned by the async nature of the functions, these functions g1 ang g2 will execute simultaneously
+  //tokio join will execute the future returned by the async nature of the functions, these functions g1 ang g2 will execute simultaneously
   let (r1, r2) = tokio::join!(g1(), g2());
   // let r1 = g1().await;
   // let r2 = g2().await;
