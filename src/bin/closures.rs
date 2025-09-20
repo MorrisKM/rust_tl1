@@ -17,4 +17,26 @@ fn main() {
   let v = 1;
   let f = |x| x + v;
   let z = f(3);
+
+
+  // Borrow immutable reference &T
+  let s = "hello".to_string();
+  let f = || println!("borrow: {s}");
+  f();
+  println!("main: {s}");
+
+  // Borrow mutable reference &mut T
+  let mut s = "hello".to_string();
+  let mut f = || s += " rust";
+  f();
+  println!("main: {s}");
+
+  // Taking ownership of value T using the move keyword
+  let s = "hello".to_string();
+  let f = move || {
+    println!("move: {s}");
+    s;
+  };
+  f();
+
 }
